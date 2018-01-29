@@ -132,9 +132,6 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func decimalPressed(_ sender: UIButton) {
-        
-    }
     
 
     override func didReceiveMemoryWarning() {
