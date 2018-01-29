@@ -22,16 +22,8 @@ class ViewController: UIViewController {
             outputLabel.text = display
         }
     }
-    var op: String = "" {
-        didSet{
-            print(op)
-        }
-    }
-    var numbers: [Int] = [] {
-        didSet{
-            print(numbers)
-        }
-    }
+    var op: String = ""
+    var numbers: [Int] = []
     var numCount : Int = 0
     var begin : Bool = false
     
@@ -102,6 +94,7 @@ class ViewController: UIViewController {
                 self.display = String(numbers.count)
             case "avg":
                 var sum : Int = 0
+                numCount += 1
                 for num in numbers {
                     sum += num
                 }
@@ -131,11 +124,16 @@ class ViewController: UIViewController {
         self.op = "fact"
         var num : Int = Int(self.display)!
         var sum : Int = num
-        while num != 0 {
+        while num != 1 {
             sum = sum * (num - 1)
             num = num - 1
         }
         self.display = String(sum)
+    }
+    
+    
+    @IBAction func decimalPressed(_ sender: UIButton) {
+        
     }
     
 
